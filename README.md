@@ -15,12 +15,10 @@ User feedback loop for continuous improvement
 - OpenAI API key
 
 ## Installation
-Clone the repository
-Install dependencies:
-Copypip install -r requirements.txt
-
-Create a .env file in the project root with your OpenAI API key:
-CopyOPENAI_API_KEY=your_api_key_here
+1. Clone the repository
+2. Install dependencies:
+3. Copypip install -r requirements.txt
+4. Create a .env file in the project root with your OpenAI API key: CopyOPENAI_API_KEY=your_api_key_here
 
 
 Core Components
