@@ -80,5 +80,4 @@ Potential enhancements for the system:
 - Web UI for interactive query answering
 - Multi-modal document support
 
-License
-MIT License
+##License
