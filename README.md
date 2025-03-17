@@ -10,12 +10,11 @@ User feedback loop for continuous improvement
 
 ## Requirements
 
-Python 3.8+
-Dependencies listed in requirements.txt
-OpenAI API key
+- Python 3.8+
+- Dependencies listed in requirements.txt
+- OpenAI API key
 
 ## Installation
-
 Clone the repository
 Install dependencies:
 Copypip install -r requirements.txt
