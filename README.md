@@ -8,13 +8,13 @@ Document management through a centralized DocumentStore class
 Integration with OpenAI's GPT-4 for answer generation
 User feedback loop for continuous improvement
 
-Requirements
+## Requirements
 
 Python 3.8+
 Dependencies listed in requirements.txt
 OpenAI API key
 
-Installation
+## Installation
 
 Clone the repository
 Install dependencies:
