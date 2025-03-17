@@ -1,6 +1,6 @@
-Advanced RAG System
+# Advanced RAG System
 A robust Retrieval-Augmented Generation (RAG) system that combines multiple retrieval methods (BM25 and FAISS) with LLM-based generation.
-Overview
+## Overview
 This system enhances LLM responses by retrieving relevant context from a document store before generating answers. It features:
 
 Hybrid retrieval combining lexical search (BM25) and semantic search (FAISS)
