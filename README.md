@@ -22,42 +22,44 @@ User feedback loop for continuous improvement
    CopyOPENAI_API_KEY=your_api_key_here
 
 
-Core Components
-DocumentStore
+## Core Components
+## DocumentStore
 Manages document storage, indexing, and retrieval operations:
 
-Maintains document collection
-Creates and updates BM25 index for lexical search
-Manages FAISS index for vector similarity search
-Provides hybrid retrieval combining both methods
+- Maintains document collection
+- Creates and updates BM25 index for lexical search
+- Manages FAISS index for vector similarity search
+- Provides hybrid retrieval combining both methods
 
-Retrieval Methods
+## Retrieval Methods
 
-BM25 Retrieval: Token-based lexical search
-FAISS Retrieval: Dense vector similarity search
-Hybrid Retrieval: Combines and deduplicates results from both methods
+1. **BM25 Retrieval**: Token-based lexical search
+2. **FAISS Retrieval**: Dense vector similarity search
+3. **Hybrid Retrieval**: Combines and deduplicates results from both methods
 
-Query Processing
-The process_query function implements a complete RAG pipeline:
+## Query Processing
+The `process_query` function implements a complete RAG pipeline:
 
-Retrieves relevant documents using hybrid retrieval
-Constructs a prompt with the retrieved context
-Sends the prompt to the LLM for answer generation
-Returns a structured response with answer and retrieved documents
+1. Retrieves relevant documents using hybrid retrieval
+2. Constructs a prompt with the retrieved context
+3. Sends the prompt to the LLM for answer generation
+4. Returns a structured response with answer and retrieved documents
 
-Feedback Loop
+### Feedback Loop
+
 The system can improve over time by incorporating user feedback:
+- Positive feedback adds documents to the knowledge base
+- Both retrieval indices are updated accordingly
 
-Positive feedback adds documents to the knowledge base
-Both retrieval indices are updated accordingly
+## Usage Example
 
-Usage Example
-pythonCopy# Initialize with documents
+```python
+# Initialize with documents
 documents = [
-    "Neural networks have revolutionized AI research.",
-    "Tokenization is crucial for text processing in NLP.",
-    "Adversarial robustness is a key challenge in AI models.",
-    "FAISS enables efficient similarity search over embeddings."
+ "Neural networks have revolutionized AI research.",
+ "Tokenization is crucial for text processing in NLP.",
+ "Adversarial robustness is a key challenge in AI models.",
+ "FAISS enables efficient similarity search over embeddings."
 ]
 doc_store.add_documents(documents)
 
@@ -67,15 +69,16 @@ result = process_query(query)
 
 # Provide feedback
 feedback_loop(query, "positive", result["retrieved_docs"])
-Extensions and Improvements
+```
+## Extensions and Improvements
 Potential enhancements for the system:
 
-Document chunking for handling longer texts
-Reranking step to improve retrieval precision
-Metadata filtering for targeted retrieval
-Persistent storage for document embeddings and indices
-Web UI for interactive query answering
-Multi-modal document support
+- Document chunking for handling longer texts
+- Reranking step to improve retrieval precision
+- Metadata filtering for targeted retrieval
+- Persistent storage for document embeddings and indices
+- Web UI for interactive query answering
+- Multi-modal document support
 
 License
 MIT License
